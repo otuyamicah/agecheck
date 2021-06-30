@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <script>
+        function bmi(){
+            var height = (document.getElementById("h").value)
+            var weight = (document.getElementById("w").value)
+            var bmi=weight/(height*height);
+            var userBMI=document.getElementById("bmi_index")
+            userBMI.textContent=bmi.toFixed(1)
+
+
+            if (bmi < 18.5) {
+                alert("this person is slim")
+
+            }
+
+            else if (bmi > 18.5 && bmi < 30.0 ) {
+                alert("this person is fat")
+         
+            }
+
+           else {
+            alert("this person is obese") 
+           }
+
+
+        //    bmi < 18.5 ? console.log("this person is slim") : console.log("this person is fat")
+        //    bmi > 30.0 ? console.log("this person is obese")
+                        
+        
+              
+        }
+    </script>
+</head>
+<body>
+    Height<input type="text" id="h"><br><br>
+    Weight<input type="text" id="w"><br><br>
+    <input type="button" value="calculate" onclick="bmi()">
+    <h2 class="text-input">BMI=<b id="bmi_index"></b></h2>
+
+                                     
+</body>
+</html>
